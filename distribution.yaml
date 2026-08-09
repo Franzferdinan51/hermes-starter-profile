@@ -1,0 +1,13 @@
+name: starter-hermes
+version: 0.1.0
+description: A focused Hermes profile for learning the agent without tool overload.
+hermes_requires: ">=0.20.0"
+author: Teknium
+license: MIT
+distribution_owned:
+  - SOUL.md
+  - config.yaml
+  - .no-bundled-skills
+  - GETTING_STARTED.md
+  - DESIGN.md
+  - scripts

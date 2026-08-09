@@ -1,0 +1,113 @@
+model:
+  provider: auto
+  default: ""
+
+agent:
+  max_turns: 20
+  verify_on_stop: false
+  disabled_toolsets:
+    - bfl
+    - code_execution
+    - computer_use
+    - context_engine
+    - cronjob
+    - delegation
+    - desktop_ui
+    - discord
+    - discord_admin
+    - feishu_doc
+    - feishu_drive
+    - file
+    - homeassistant
+    - kanban
+    - memory
+    - project
+    - session_search
+    - skills
+    - spotify
+    - terminal
+    - todo
+    - video
+    - video_gen
+    - x_search
+    - yuanbao
+
+# The same focused baseline is explicit on every shipped Hermes surface.
+platform_toolsets:
+  cli: [clarify, image_gen, search, tts, vision]
+  telegram: [clarify, image_gen, search, tts, vision]
+  discord: [clarify, image_gen, search, tts, vision]
+  slack: [clarify, image_gen, search, tts, vision]
+  whatsapp: [clarify, image_gen, search, tts, vision]
+  whatsapp_cloud: [clarify, image_gen, search, tts, vision]
+  signal: [clarify, image_gen, search, tts, vision]
+  bluebubbles: [clarify, image_gen, search, tts, vision]
+  email: [clarify, image_gen, search, tts, vision]
+  homeassistant: [clarify, image_gen, search, tts, vision]
+  mattermost: [clarify, image_gen, search, tts, vision]
+  matrix: [clarify, image_gen, search, tts, vision]
+  dingtalk: [clarify, image_gen, search, tts, vision]
+  feishu: [clarify, image_gen, search, tts, vision]
+  wecom: [clarify, image_gen, search, tts, vision]
+  wecom_callback: [clarify, image_gen, search, tts, vision]
+  weixin: [clarify, image_gen, search, tts, vision]
+  qqbot: [clarify, image_gen, search, tts, vision]
+  yuanbao: [clarify, image_gen, search, tts, vision]
+  webhook: [clarify, image_gen, search, tts, vision]
+  api_server: [clarify, image_gen, search, tts, vision]
+  cron: [clarify, image_gen, search, tts, vision]
+
+web:
+  # Empty means Hermes uses the configured or managed search provider.
+  search_backend: ""
+  extract_backend: ""
+
+browser:
+  allow_private_urls: false
+  record_sessions: false
+
+privacy:
+  redact_pii: true
+
+memory:
+  memory_enabled: false
+  user_profile_enabled: false
+  nudge_interval: 0
+  write_approval: true
+
+skills:
+  external_dirs: []
+  creation_nudge_interval: 0
+  write_approval: true
+
+curator:
+  enabled: false
+
+delegation:
+  inherit_mcp_toolsets: false
+  orchestrator_enabled: false
+  max_spawn_depth: 1
+  subagent_auto_approve: false
+
+checkpoints:
+  enabled: false
+
+smart_model_routing:
+  enabled: false
+
+security:
+  allow_private_urls: false
+  redact_secrets: true
+  protected_instruction_files: true
+  tirith_enabled: true
+  tirith_fail_open: false
+  allow_lazy_installs: false
+  website_blocklist:
+    enabled: false
+    domains: []
+    shared_files: []
+
+hooks: {}
+hooks_auto_accept: false
+quick_commands: {}
+mcp_servers: {}

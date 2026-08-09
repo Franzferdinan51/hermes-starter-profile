@@ -1,0 +1,10 @@
+*.pyc
+__pycache__/
+.env
+.DS_Store
+auth.lock
+state.db*
+cache/
+logs/
+sessions/
+memories/

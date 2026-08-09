@@ -19,7 +19,8 @@ You don't need to know Git, Python, YAML, or what an "agent profile" is. We star
 > This repository is a **test to see whether this Hermes starter profile is compatible with the attached HHCS AI Community Playbook** (updated May 2026, Policy EDEC). It is **not** an HHCS product, district approval, legal interpretation, or official implementation of the plan. I may be unaware of additional HHCS rules, Board policies, teacher instructions, approved-tool requirements, age limits, privacy requirements, or later updates. **Those rules may be stricter than this repository.**
 >
 > The official HHCS rules and the student's teacher or administrator always control. If they conflict with this README, `STUDENT_GUIDE.md`, or the profile, **stop and follow HHCS guidance**. Ask the teacher or district before using this profile for schoolwork. No assignment may use AI unless the educator has labeled it GREEN or YELLOW; RED assignments are human-only. Even when use is allowed, use the district's Approved Tool List and follow every disclosure, verification, privacy, and citation requirement.
-
+>
+> **This is not a complete HHCS compliance review.** The public HHCS information I could verify does not establish every current classroom rule, building rule, approved-tool decision, privacy condition, age requirement, or implementation detail. Treat this repository as an experiment that needs HHCS review before school deployment.
 ---
 
 ## What's in this README
@@ -32,7 +33,8 @@ You don't need to know Git, Python, YAML, or what an "agent profile" is. We star
 6. [Shared language: a small glossary](#shared-language-a-small-glossary)
 7. [Update, remove, troubleshoot](#update-the-profile)
 8. [A note for families and educators](#a-note-for-families-and-educators)
-9. [Design, limitations, and license](#design-and-limitations)
+9. [Official HHCS sources checked](#official-hhcs-sources-checked)
+10. [Design, limitations, and license](#design-and-limitations)
 
 > **Looking for the kid-friendly version?** Open [`STUDENT_GUIDE.md`](STUDENT_GUIDE.md) — a student-facing companion to the HHCS AI Playbook that ships with this profile.
 
@@ -430,6 +432,20 @@ HERMES_HOME="$HOME/.hermes/profiles/starter-hermes" \
 ```
 
 If your system does not have `python3.11`, install a current Python release or use the Python executable bundled with your Hermes environment. The last line should begin with `PASS`. This audit is optional; it is not required to start chatting.
+
+---
+
+## Official HHCS sources checked
+
+This README was checked against the attached **HHCS AI Community Playbook** (updated May 2026, Policy EDEC) and the following publicly available Huber Heights City Schools sources:
+
+- [HHCS Board of Education policy portal](https://go.boarddocs.com/oh/huhe/Board.nsf/Public?open=&id=policies) — official location for Board policies, including Policy EDEC. The portal may require its own search or access path.
+- [HHCS Technology](https://www.myhhcs.org/technology) — identifies Technology Services as supporting the district's operational and educational technology environments.
+- [HHCS Curriculum & Instruction](https://www.myhhcs.org/curriculum-instruction) — identifies the department responsible for curriculum, instructional resources, assessment, and staff development.
+- [HHCS official Facebook post about the AI Playbook](https://www.facebook.com/HHCSdistrict/posts/huber-heights-city-schools-created-its-ai-playbook-in-the-spring-of-2026-hhcs-en/1611769114285691) — public district communication about the playbook's purpose and learning-focused approach.
+- [HHCS official Facebook post about student AI use](https://www.facebook.com/HHCSdistrict/posts/huber-heights-city-schools-district-surveys-showed-that-hhcs-students-are-alread/1613582240771045) — public district communication indicating that HHCS students are already engaging with AI.
+
+These sources support the need for a careful, learning-centered compatibility test. They do **not** prove that this Hermes profile is approved for use by HHCS. The attached playbook and current direction from HHCS staff remain the controlling sources. Re-check the official HHCS policy portal and district communications for updates before relying on this profile.
 
 ---
 

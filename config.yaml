@@ -1,5 +1,8 @@
 model:
-  provider: auto
+  # Local-first default: LM Studio's OpenAI-compatible server.
+  # Start LM Studio's Developer server on http://localhost:1234/v1,
+  # then run `starter-hermes model` to select a loaded local model.
+  provider: lmstudio
   default: ""
 
 agent:

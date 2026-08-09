@@ -10,16 +10,20 @@ We keep this file short because **process over product** — the goal is for you
 ### The shortest path for an existing Hermes installation
 
 ```bash
-hermes profile install github.com/teknium1/hermes-starter-profile --alias
-starter-hermes setup --portal
+hermes profile install github.com/Franzferdinan51/hermes-starter-profile --alias
+starter-hermes model
 starter-hermes chat
 ```
+
+Before `starter-hermes model`, start the LM Studio Developer server at `http://localhost:1234/v1`. Select **LM Studio** and choose a loaded local model. This profile defaults to LM Studio; cloud providers are optional. See the [LM Studio setup section in the README](README.md#step-3--connect-a-local-model-in-lm-studio).
 
 ### Before you start chatting
 
 > **From the playbook:** *"Verify AI output; it can 'hallucinate' wrong or made-up information."*
 
-AI is a learning assistant. The thinking is yours. When you use chat output for school work, **disclose** what you used and how:
+This profile defaults to LM Studio, but local does not mean automatically approved for HHCS schoolwork. Check the HHCS District Approved List and ask the educator before using it for an assignment.
+
+AI is a learning assistant. The thinking is yours. When you use permitted chat output for school work, **disclose** what you used and how:
 
 1. **Name the tool** — e.g., `starter-hermes`.
 2. **Describe the use** — e.g., *"I asked the AI to brainstorm five essay topics."*

@@ -10,7 +10,7 @@ A friendly, calm way to try **Hermes Agent** for the first time without turning 
 You don't need to know Git, Python, YAML, or what an "agent profile" is. We start at zero and walk through it together.
 
 [![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Profile version](https://img.shields.io/badge/version-0.3.0-blue)](distribution.yaml)
+[![Profile version](https://img.shields.io/badge/version-0.4.0-blue)](distribution.yaml)
 [![HHCS compatibility test](https://img.shields.io/badge/HHCS-compatibility%20test-orange)](STUDENT_GUIDE.md)
 [![Hermes](https://img.shields.io/badge/Hermes-%E2%89%A5%200.20.0-purple)](https://hermes-agent.nousresearch.com/)
 
@@ -164,36 +164,42 @@ hermes -p starter-hermes --version
 
 For example, `hermes -p starter-hermes chat` means the same thing as `starter-hermes chat`.
 
-### Step 3 — Connect a model
+### Step 3 — Connect a local model in LM Studio
 
-A **model** is the AI that writes the responses. A **provider** is the service that runs that model. This profile does not include an account, subscription, or API key, so you choose your own.
+This profile now defaults to **LM Studio**, so your first model can run locally on your own computer instead of using a cloud provider. A **model** is the AI that writes the responses. LM Studio is the local app that loads and serves that model.
 
-#### Recommended beginner option: Nous Portal
-
-Run:
-
-```bash
-starter-hermes setup --portal
-```
-
-Your browser will open. Sign in and approve the connection. This configures a model and Nous-managed tools without asking you to copy API keys into files.
-
-#### Use another provider
-
-If you already use OpenAI Codex, Anthropic, OpenRouter, Google, or another supported provider, run:
+1. Install and open [LM Studio](https://lmstudio.ai/).
+2. Download a model that your computer can run.
+3. Open LM Studio's **Developer** tab and select **Start Server**.
+4. Leave the server at its default address: `http://localhost:1234/v1`.
+5. In another terminal, run:
 
 ```bash
 starter-hermes model
 ```
 
-Follow the menu to choose the provider and model. Hermes will either open an official sign-in page or ask for that provider's API key.
+Choose **LM Studio**, press Enter to use `http://localhost:1234/v1`, and select one of the models LM Studio discovered. Hermes will use the selected local model by default. Models with native tool-calling support (such as supported Qwen, Llama, Mistral, or Hermes models) generally work best with this profile's tools.
+
+If LM Studio server authentication is enabled, enter your local `LM_API_KEY` when Hermes asks. Do not paste that key into chat or commit it to this repository.
+
+> **Local means local to the computer running Hermes.** If Hermes runs in WSL2 or on another computer while LM Studio runs elsewhere, `localhost` may not point to LM Studio. Follow Hermes' [official LM Studio provider guidance](https://hermes-agent.nousresearch.com/docs/integrations/providers#lm-studio--desktop-app-with-local-models) for networking.
+
+#### Use another provider instead
+
+If LM Studio is not available, you can choose another supported provider:
+
+```bash
+starter-hermes model
+```
+
+The alternate provider may require an account, subscription, OAuth sign-in, or API key. Cloud providers are **not** the default for this profile.
 
 > **Important, please read.**
 >
-> - Run setup through `starter-hermes`, not plain `hermes`. Every profile keeps its own credentials and settings.
+> - Run setup through `starter-hermes`, not plain `hermes`. Every profile keeps its own settings.
 > - Never paste an API key into a chat message, GitHub issue, or public file. Treat keys like a password.
-> - Charges and subscription limits are controlled by the provider you choose, not by this repository.
-
+> - Provider charges and subscription limits are controlled by the provider you choose, not by this repository.
+> - For HHCS schoolwork, a local model is **not automatically an approved tool**. Check the District Approved List and ask the educator before use.
 ### Step 4 — Start your first chat
 
 Run:

@@ -11,8 +11,14 @@ You don't need to know Git, Python, YAML, or what an "agent profile" is. We star
 
 [![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Profile version](https://img.shields.io/badge/version-0.3.0-blue)](distribution.yaml)
-[![HHCS Playbook aligned](https://img.shields.io/badge/HHCS-Playbook%20aligned-success)](STUDENT_GUIDE.md)
+[![HHCS compatibility test](https://img.shields.io/badge/HHCS-compatibility%20test-orange)](STUDENT_GUIDE.md)
 [![Hermes](https://img.shields.io/badge/Hermes-%E2%89%A5%200.20.0-purple)](https://hermes-agent.nousresearch.com/)
+
+> ## Important: compatibility test, not HHCS approval
+>
+> This repository is a **test to see whether this Hermes starter profile is compatible with the attached HHCS AI Community Playbook** (updated May 2026, Policy EDEC). It is **not** an HHCS product, district approval, legal interpretation, or official implementation of the plan. I may be unaware of additional HHCS rules, Board policies, teacher instructions, approved-tool requirements, age limits, privacy requirements, or later updates. **Those rules may be stricter than this repository.**
+>
+> The official HHCS rules and the student's teacher or administrator always control. If they conflict with this README, `STUDENT_GUIDE.md`, or the profile, **stop and follow HHCS guidance**. Ask the teacher or district before using this profile for schoolwork. No assignment may use AI unless the educator has labeled it GREEN or YELLOW; RED assignments are human-only. Even when use is allowed, use the district's Approved Tool List and follow every disclosure, verification, privacy, and citation requirement.
 
 ---
 
@@ -69,7 +75,7 @@ It **cannot** open a terminal, change files, take over your browser, control you
 | You're a student, family, or educator exploring AI. | You want full system-administration power — install a different profile. |
 | You want to follow your school's AI guidelines. | You want AI to do an assignment for you without thinking. |
 
-> **Privacy, plain and short.** This profile has **memory off**, **PII redaction on**, and **no secret keys stored**. Your chats live on your own machine. The playbook promises that; this profile keeps it.
+> **Privacy, plain and short.** This profile has **memory off**, **PII redaction on**, and **no secret keys stored**. It may still send your prompts to the model provider you choose, and the provider's privacy and retention rules also apply. Never enter confidential student or staff information. The HHCS playbook and official district privacy rules take priority over this profile.
 
 > **What to do next.** Skip to [Five-step setup](#five-step-setup) if you're ready. If you want a one-paragraph explainer first, read [What is a profile, really?](#what-is-a-profile-really). If a word confused you, jump to [Shared language](#shared-language-a-small-glossary).
 
@@ -218,7 +224,9 @@ Help me turn a rough app idea into a one-page plan.
 
 Type `/quit` to leave the chat.
 
-> **From the playbook: cite the AI you used.** When you use chat output for school work, name the tool and what you asked it to do. This is the same as citing a book or website. It's required on **yellow** (limited use) and **green** (open use) assignments. See [`STUDENT_GUIDE.md`](STUDENT_GUIDE.md) for the full citation steps.
+> **Schoolwork rule.** This profile cannot decide whether an assignment is RED, YELLOW, or GREEN. Your educator decides. If use is allowed, HHCS says students and teachers should use software on the [District Approved List](https://sdpc.a4l.org/district_listing.php?districtID=4804). Verify that `starter-hermes` is approved before using it for schoolwork; if it is not listed, do not use it for that assignment. Follow any stricter classroom, building, district, state, or federal rule.
+>
+> **From the playbook: cite the AI you used.** When you use permitted chat output for school work, name the tool and what you asked it to do. This is the same as citing a book or website. It is required on **yellow** (limited use) and **green** (open use) assignments. See [`STUDENT_GUIDE.md`](STUDENT_GUIDE.md) for the full disclosure steps.
 
 ### Step 5 — Check the profile
 

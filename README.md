@@ -5,9 +5,30 @@
 > *"Learn matters most. Set the guardrails. Be partners in this work."*
 > — Huber Heights City Schools AI Community Playbook
 
-This is a friendly, calm way to try **Hermes Agent** for the first time, without turning on the full system-administration toolset. We wrote it for **students, families, and educators** who want to learn by doing, with the same spirit as the HHCS AI Playbook: **process over product, transparency over shortcuts, and people at the center of learning.**
+A friendly, calm way to try **Hermes Agent** for the first time without turning on the full system-administration toolset. We wrote it for **students, families, and educators** who want to learn by doing, with the same spirit as the HHCS AI Playbook: **process over product, transparency over shortcuts, and people at the center of learning.**
 
 You don't need to know Git, Python, YAML, or what an "agent profile" is. We start at zero and walk through it together.
+
+[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Profile version](https://img.shields.io/badge/version-0.3.0-blue)](distribution.yaml)
+[![HHCS Playbook aligned](https://img.shields.io/badge/HHCS-Playbook%20aligned-success)](STUDENT_GUIDE.md)
+[![Hermes](https://img.shields.io/badge/Hermes-%E2%89%A5%200.20.0-purple)](https://hermes-agent.nousresearch.com/)
+
+---
+
+## What's in this README
+
+1. [Our three pillars](#our-three-pillars-from-the-hhcs-playbook)
+2. [What you will get](#what-you-will-get)
+3. [Five-step setup](#five-step-setup)
+4. [What is a profile, really?](#what-is-a-profile-really)
+5. [Why a tool may be unavailable](#why-a-tool-may-be-unavailable)
+6. [Shared language: a small glossary](#shared-language-a-small-glossary)
+7. [Update, remove, troubleshoot](#update-the-profile)
+8. [A note for families and educators](#a-note-for-families-and-educators)
+9. [Design, limitations, and license](#design-and-limitations)
+
+> **Looking for the kid-friendly version?** Open [`STUDENT_GUIDE.md`](STUDENT_GUIDE.md) — a student-facing companion to the HHCS AI Playbook that ships with this profile.
 
 ---
 
@@ -28,7 +49,7 @@ Everything in this profile is shaped by three commitments from the playbook. We 
 
 ## What you will get
 
-After following the five steps below, you will have a separate command named `starter-hermes`. Imagine it as a **study buddy in a small box** — it can:
+After following the five-step setup, you will have a separate command named `starter-hermes`. Imagine it as a **study buddy in a small box** — it can:
 
 - answer questions and explain unfamiliar topics in plain language;
 - search the web and cite sources when search is configured;
@@ -50,9 +71,11 @@ It **cannot** open a terminal, change files, take over your browser, control you
 
 > **Privacy, plain and short.** This profile has **memory off**, **PII redaction on**, and **no secret keys stored**. Your chats live on your own machine. The playbook promises that; this profile keeps it.
 
+> **What to do next.** Skip to [Five-step setup](#five-step-setup) if you're ready. If you want a one-paragraph explainer first, read [What is a profile, really?](#what-is-a-profile-really). If a word confused you, jump to [Shared language](#shared-language-a-small-glossary).
+
 ---
 
-## Five-step setup (about five minutes)
+## Five-step setup
 
 > **Before we start.** A computer takes a lot of language literally. The commands below need to be typed **exactly** as shown, but the *ideas* behind them are simple. We explain each one in plain words first.
 
@@ -109,15 +132,17 @@ A **profile** is just a separate workspace for Hermes. It has its own model, its
 Copy this whole command into the terminal:
 
 ```bash
-hermes profile install github.com/teknium1/hermes-starter-profile --alias
+hermes profile install github.com/Franzferdinan51/hermes-starter-profile --alias
 ```
 
-Hermes will show you a preview of what is about to change. Confirm when it asks. The command creates:
+> **Which URL is this?** This profile lives at `github.com/Franzferdinan51/hermes-starter-profile`, a fork of `teknium1/hermes-starter-profile`. The fork carries the playbook-aligned personality and the `STUDENT_GUIDE.md`. Installing from the fork makes sure you get the version this README describes.
 
-- a separate profile named `starter-hermes`; and
-- a shortcut command, also named `starter-hermes`.
+Hermes will show you a preview of what is about to change. It should mention:
 
-Check that the shortcut works:
+- a new profile named `starter-hermes`, and
+- a new shortcut command, also named `starter-hermes`.
+
+Confirm when it asks. Then check that the shortcut works:
 
 ```bash
 starter-hermes --version
@@ -211,6 +236,12 @@ starter-hermes doctor
 
 You now have a working starter profile. Nice work — you did the hard part.
 
+### Where to go next
+
+- **Read [`STUDENT_GUIDE.md`](STUDENT_GUIDE.md)** for the kid-friendly version of the playbook that ships with this profile.
+- **Try a school-style prompt** (and disclose it): *"Explain the Pythagorean theorem step-by-step, then give me two practice problems. I'll show my work for each."*
+- **Talk it through.** If a response looks wrong, ask the model where it got the information. That is the human-in-the-loop part.
+
 ---
 
 ## What is a profile, really?
@@ -260,11 +291,28 @@ The playbook says *"shared language is shared power."* Here are the words you'll
 | **Prompt** | The question or instruction you give the AI. Better prompts = better results. |
 | **Hallucination** | When AI states something confidently that is actually wrong or made up. **Always verify AI output before using it.** |
 | **Disclosure** | Naming the AI tool you used and describing what it helped you do. |
-| **Process vs. Product** | We value how you learn (the process) as much as the final answer (the product). |
+| **Human-in-the-loop** | A person (you or your teacher) always reviews, verifies, and takes responsibility for any AI-generated content. |
+| **Process vs. product** | We value how you learn (the process) as much as the final answer (the product). |
 
 ---
 
-## Update the profile
+## A note for families and educators
+
+This profile is built on the same principles as the HHCS AI Community Playbook: **learning is a human endeavor.** Hermes is a tool, not a teacher. The guardrails in [`config.yaml`](config.yaml) are designed to keep the first experience with an AI agent focused on:
+
+- **supporting**, not replacing, the thinking process;
+- **transparency** about what AI was used and how; and
+- **protecting** privacy — no memory, no PII, no secret keys stored in the profile.
+
+If you are a parent or educator, see [`STUDENT_GUIDE.md`](STUDENT_GUIDE.md) for a kid-friendly version of the AI Playbook that ships with this profile. It includes the Red / Yellow / Green framework, the AI glossary, the response protocol, and the role commitments for students, families, educators, and district leadership.
+
+If a first AI-misuse moment happens, **the playbook's response is the playbook's response here too:** start with a conversation, not a punishment. Ask what the student was learning, what they asked the AI to do, and how they verified the output. Transparency tools the conversation. Trust first, judgment second.
+
+---
+
+## Update, remove, troubleshoot
+
+### Update the profile
 
 Pull the newest personality, documentation, and audit script with:
 
@@ -284,9 +332,7 @@ Then start a new chat.
 
 > **From the playbook:** We update this profile at least once a year. The playbook is a living document. So is this.
 
----
-
-## Remove the profile
+### Remove the profile
 
 Deleting this profile removes its local settings and conversation data. It does **not** uninstall Hermes itself.
 
@@ -296,11 +342,9 @@ hermes profile delete starter-hermes
 
 Read the confirmation carefully before accepting it. The same rule from the playbook applies here: **before any consequences, we read carefully.**
 
----
+### Troubleshooting
 
-## Troubleshooting
-
-### `hermes` is not recognized or says `command not found`
+#### `hermes` is not recognized or says `command not found`
 
 Close and reopen the terminal after installing Hermes, then run:
 
@@ -310,7 +354,7 @@ hermes --version
 
 On macOS or Linux, the executable is normally installed under `~/.local/bin`. If reopening the terminal does not help, follow the official [installation troubleshooting guide](https://hermes-agent.nousresearch.com/docs/getting-started/installation).
 
-### `starter-hermes` is not recognized
+#### `starter-hermes` is not recognized
 
 Close and reopen the terminal. You can always use the full profile form:
 
@@ -318,7 +362,7 @@ Close and reopen the terminal. You can always use the full profile form:
 hermes -p starter-hermes chat
 ```
 
-### Hermes says no model or provider is configured
+#### Hermes says no model or provider is configured
 
 Run one of these, then retry the chat:
 
@@ -330,7 +374,7 @@ starter-hermes setup --portal
 starter-hermes model
 ```
 
-### Authentication failed
+#### Authentication failed
 
 Check the saved authentication state:
 
@@ -340,7 +384,7 @@ starter-hermes auth status
 
 Then run `starter-hermes model` and sign in again or replace the rejected API key. **Do not post keys in a support request.**
 
-### The profile is already installed
+#### The profile is already installed
 
 Update the existing installation:
 
@@ -350,11 +394,11 @@ hermes profile update starter-hermes
 
 If you truly want to start over, delete the profile first. Deletion also removes its local sessions and settings.
 
-### Chat works, but search or media tools do not
+#### Chat works, but search or media tools do not
 
 The selected model provider and the optional tool providers are separate. Run `starter-hermes portal status`, `starter-hermes tools`, and `starter-hermes doctor` to see what is configured.
 
-### You still need help
+#### You still need help
 
 Run:
 
@@ -392,15 +436,12 @@ This profile reduces tool access; it is **not** an operating-system sandbox and 
 
 ---
 
-## A note for families and educators
+## A closing thought
 
-This profile is built on the same principles as the HHCS AI Community Playbook: **learning is a human endeavor.** Hermes is a tool, not a teacher. The guardrails in `config.yaml` are designed to keep the first experience with an AI agent focused on:
+> *"We want to be partners in this. Tell us the rules, tell us the tools, and help us help our kids at home."*
+> — HHCS Parent
 
-- **supporting**, not replacing, the thinking process;
-- **transparency** about what AI was used and how; and
-- **protecting** privacy — no memory, no PII, no secret keys stored in the profile.
-
-If you are a parent or educator, see [`STUDENT_GUIDE.md`](STUDENT_GUIDE.md) for a kid-friendly version of the AI Playbook that ships with this profile.
+This profile is one small part of that partnership. Help the learner **think**, **cite**, and **keep going**. That's the whole job.
 
 ---
 

@@ -414,14 +414,14 @@ Share that diagnostic summary, **not** your `.env`, `auth.json`, API keys, or to
 
 This repository includes an audit for people who want to verify that the installed profile still resolves to the intended toolsets.
 
-On macOS, Linux, or WSL2:
+On macOS, Linux, or WSL2, use **Python 3.11 or newer**. Hermes' resolver uses modern Python type syntax, so an older system Python may report an import error even when the profile is configured correctly:
 
 ```bash
 HERMES_HOME="$HOME/.hermes/profiles/starter-hermes" \
-  python "$HOME/.hermes/profiles/starter-hermes/scripts/audit_profile.py"
+  python3.11 "$HOME/.hermes/profiles/starter-hermes/scripts/audit_profile.py"
 ```
 
-The last line should begin with `PASS`. This audit is optional; it is not required to start chatting.
+If your system does not have `python3.11`, install a current Python release or use the Python executable bundled with your Hermes environment. The last line should begin with `PASS`. This audit is optional; it is not required to start chatting.
 
 ---
 

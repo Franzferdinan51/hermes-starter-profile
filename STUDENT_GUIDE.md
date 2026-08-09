@@ -11,6 +11,52 @@ If you only have ten minutes, read the **bold words** at the start of each secti
 
 ---
 
+## Quick start card
+
+If you just want to try it:
+
+```bash
+starter-hermes chat
+```
+
+Then type:
+
+```text
+Explain what you can help me with in five bullet points.
+```
+
+Type `/quit` to leave the chat. For the full setup, open [`README.md`](README.md).
+
+---
+
+## What's in this guide
+
+1. [Who we are and why this matters](#1-who-we-are-and-why-this-matters)
+2. [Our vision for AI at HHCS](#2-our-vision-for-ai-at-hhcs)
+3. [Shared language: our AI glossary](#3-shared-language-our-ai-glossary)
+4. [The Red / Yellow / Green framework](#4-the-red--yellow--green-framework)
+5. [How to disclose AI use](#5-how-to-disclose-ai-use-yellow-and-green-assignments)
+6. [On AI detection tools](#6-on-ai-detection-tools)
+7. [Our shared commitments](#7-our-shared-commitments)
+8. [Response protocol: conversation before consequences](#8-response-protocol-conversation-before-consequences)
+9. [Questions we are still working through](#9-questions-we-are-still-working-through)
+10. [A living document](#10-a-living-document)
+
+---
+
+## A note on privacy
+
+The playbook says **HHCS will protect data privacy and the security of all confidential student and staff information, and comply with FERPA and COPPA.** Starter Hermes tries to live up to that:
+
+- **Memory is off.** Nothing you say is remembered between chats.
+- **No personal data is collected** by the profile itself.
+- **No secret keys are stored** in the profile. You sign in with your provider; that's their job to keep safe.
+- **Your chats live on your own machine.** They aren't sent anywhere besides the model you choose.
+
+If a teacher or parent asks "is this safe?" — the honest answer is: **safer than a browser tab, not a substitute for adult supervision.** Keep doing the things the playbook says: talk before you act, disclose when you use AI, and verify what AI tells you.
+
+---
+
 ## 1. Who we are and why this matters
 
 **AI is already part of your life.** Maybe you use it to check a homework problem, listen to a song it picked for you, or talk to a chatbot when you have a question. It's already there.

@@ -39,6 +39,17 @@ After following the five steps below, you will have a separate command named `st
 
 It **cannot** open a terminal, change files, take over your browser, control your computer, run tasks while you sleep, or make other AI helpers. We leave those off on purpose so your first time with Hermes is easier to understand. Less noise, more learning.
 
+### A quick "before you start" card
+
+| ✅ This profile is for you if… | ❌ This profile is **not** for you if… |
+| --- | --- |
+| You want to learn, not just get answers. | You want Hermes to run terminal commands, edit files, or take over your computer. |
+| You want a calm, low-overwhelm way to start. | You want every Hermes tool turned on with no guardrails. |
+| You're a student, family, or educator exploring AI. | You want full system-administration power — install a different profile. |
+| You want to follow your school's AI guidelines. | You want AI to do an assignment for you without thinking. |
+
+> **Privacy, plain and short.** This profile has **memory off**, **PII redaction on**, and **no secret keys stored**. Your chats live on your own machine. The playbook promises that; this profile keeps it.
+
 ---
 
 ## Five-step setup (about five minutes)
@@ -216,6 +227,8 @@ The `starter-hermes` shortcut simply tells Hermes to use that directory.
 
 You can have many profiles. Each one is a different learning room.
 
+> **From the playbook:** *"Ensure equitable access — AI should not widen the digital divide."* A separate profile means a student can experiment with AI without affecting the family's normal setup, and a teacher can give every student the same clean starting point.
+
 ---
 
 ## Why a tool may be unavailable
@@ -230,6 +243,8 @@ If normal chat works but a tool does not:
 4. Start a new chat after changing tool settings.
 
 The profile deliberately blocks terminal, file, browser-control, automation, memory, skill-management, and subagent toolsets. **A disabled capability is not an installation failure.** It is a guardrail. We protect the boundary so you can focus on the learning.
+
+> **Not sure what a word means?** Open [`STUDENT_GUIDE.md`](STUDENT_GUIDE.md) and look at the **Shared language** section. Every term used in this README is defined there in plain language.
 
 ---
 

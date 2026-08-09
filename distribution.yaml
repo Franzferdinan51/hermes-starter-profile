@@ -1,6 +1,6 @@
 name: starter-hermes
-version: 0.2.0
-description: A focused Hermes profile for learning the agent without tool overload.
+version: 0.3.0
+description: A focused Hermes profile for learning the agent without tool overload — aligned with the HHCS AI Community Playbook (Policy EDEC).
 hermes_requires: ">=0.20.0"
 author: Teknium
 license: MIT
@@ -11,4 +11,5 @@ distribution_owned:
   - README.md
   - GETTING_STARTED.md
   - DESIGN.md
+  - STUDENT_GUIDE.md
   - scripts
